@@ -1,0 +1,18 @@
+.search-bar-container{
+  margin: 1rem auto;
+}
+
+.search-bar{
+  margin: auto;
+  display: block;
+  padding: 0.5rem;
+  box-shadow: 0 0 0.5rem 1px rgba(3,3,3, 0.3);
+  border: 2px solid #999;
+  outline: none;
+  border-radius: 0.25rem;
+  transition: border 150ms ease;
+}
+
+.search-bar:focus, .search-bar:hover{
+  border: 2px solid #333;
+}

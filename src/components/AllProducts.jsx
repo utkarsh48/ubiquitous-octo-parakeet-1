@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import "../assets/css/AllProducts.css";
+import SearchBar from './SearchBar';
 
 
 export default class AllProducts extends Component{
@@ -60,19 +61,21 @@ export default class AllProducts extends Component{
   }
 
   handleSearch=(e)=>{
-    
+    const inp = e.currentTarget;
+
+    this.setState({search: inp.value});
   }
 
   render(){
     const {products, search} = this.state;
     const sorted = Object.values(products).sort((a,b)=> parseInt(b.popularity) - parseInt(a.popularity));
+    const filtered = sorted.filter(product=>product.title.toLowerCase().includes(search));
+
     return (
     <div>
-      <div>
-        <input type="text" placeholder='search' onInput={(e)=>this.handleSearch(e)} value={search} />
-      </div>
+      <SearchBar handleSearch={this.handleSearch} value={search} />
       <div className='all-products'>
-        {sorted.map(product => <Product key={Math.random()} data={product} /> )}
+        {filtered.map(product => <Product key={Math.random()} data={product} /> )}
       </div>
     </div>);
   }
