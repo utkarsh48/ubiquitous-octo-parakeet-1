@@ -1,6 +1,7 @@
 .p-container{
   padding: 1rem;
   border-radius: 0.5rem;
+  border: 2px solid #999;
   margin: 1rem;
   transition: box-shadow 150ms ease;
   min-height: 6rem;

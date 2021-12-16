@@ -1,0 +1,24 @@
+.all-pages{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.page-no{
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  border: 2px solid #333;
+  border-radius: 9999px;
+  color: #333;
+  transition: all 150ms ease;
+}
+
+.page-no:hover, .page-active{
+  background-color: #333;
+  color: white;
+}

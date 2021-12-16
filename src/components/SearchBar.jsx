@@ -1,5 +1,5 @@
 import React from 'react';
-import "../assets/css/SearchBar.css"
+import "../assets/css/SearchBar.css";
 
 
 export default function SearchBar(props){
