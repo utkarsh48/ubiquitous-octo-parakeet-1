@@ -3,7 +3,8 @@ import "../assets/css/Pagination.css"
 
 export default function Paginate(props){
   const {pageSize, pageNo, noOfItems, onPageSelect} = props;
-  const noOfPages = noOfItems / pageSize;
+  const noOfPages = Math.ceil(noOfItems / pageSize);
+  console.log(noOfPages);
 
   let pages = [];
   for(let i = 1; i<=noOfPages; i++){

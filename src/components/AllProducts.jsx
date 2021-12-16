@@ -24,11 +24,11 @@ export default class AllProducts extends Component{
   handleSearch=(e)=>{
     const inp = e.currentTarget;
 
-    this.setState({search: inp.value});
+    this.setState({search: inp.value, pageNo: 1});
   }
 
   onPageSelect=(e)=>{
-    const pageNo = e.target.innerText;
+    const pageNo = parseInt(e.target.innerText);
 
     this.setState({pageNo});
   }
@@ -48,7 +48,7 @@ export default class AllProducts extends Component{
       <div className='all-products'>
         {products.map(product => <Product key={Math.random()} data={product} /> )}
       </div>
-      <Pagination pageSize={pageSize} pageNo={pageNo} noOfItems={count || 0} onPageSelect={this.onPageSelect} />
+      <Pagination pageSize={pageSize} pageNo={pageNo} noOfItems={filtered.length || 0} onPageSelect={this.onPageSelect} />
     </div>);
   }
 }
