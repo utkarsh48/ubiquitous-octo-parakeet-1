@@ -1,0 +1,21 @@
+.p-container{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  transition: box-shadow 150ms ease;
+  min-height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+.p-title{
+  font-weight: 600;
+}
+
+.p-price{
+  font-weight: 500;
+}
